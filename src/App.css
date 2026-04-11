@@ -1,0 +1,33 @@
+.theme1 {
+  background: rgb(21, 21, 21);
+  color: white;
+  height: 100%;
+}
+
+.intro1 {
+  padding: 50px;
+  font-family: 'Inter', sans-serif;
+}
+
+.pic1 {
+  height: 300px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.skill-card {
+  transition: 0.3s ease;
+  border: 1px solid #22c55e;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
