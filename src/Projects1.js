@@ -33,6 +33,10 @@ function Projects1() {
             { breakpoint: 480, settings: { slidesToShow: 1 } }
         ]
     };
+
+
+    
+
     return (
         <div id="projects" className="theme1 py-5">
             <Container>
@@ -63,14 +67,8 @@ function Projects1() {
                                     React | Bootstrap | .NET Web API | SSMS
                                 </p>
                                 <div className="d-flex justify-content-between">
-                                    <Button variant="outline-light" size="sm">
+                                    <Button href="https://github.com/NevilPatel1292/comweb" variant="outline-light" size="sm">
                                         GitHub
-                                    </Button>
-                                    <Button
-                                        size="sm"
-                                        style={{ background: "#22c55e", border: "none" }}
-                                    >
-                                        Live Demo
                                     </Button>
                                 </div>
                             </Card.Body>
@@ -100,14 +98,8 @@ function Projects1() {
                                     React | ASP.NET Core | SSMS
                                 </p>
                                 <div className="d-flex justify-content-between">
-                                    <Button variant="outline-light" size="sm">
+                                    <Button href="https://github.com/NevilPatel1292/blogproject" variant="outline-light" size="sm">
                                         GitHub
-                                    </Button>
-                                    <Button
-                                        size="sm"
-                                        style={{ background: "#22c55e", border: "none" }}
-                                    >
-                                        Live Demo
                                     </Button>
                                 </div>
                             </Card.Body>

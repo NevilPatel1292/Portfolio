@@ -1,3 +1,5 @@
+import emailjs from "emailjs-com";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -5,6 +7,28 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function Contact1() {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_1n7vgli",
+            "template_ehp2hws",
+            e.target,
+            "NUIWcPdIMn2e-jQTl"
+        )
+            .then(() => {
+                alert("Message sent successfully!");
+            })
+            .catch((error) => {
+                console.error(error);
+                alert("Failed to send message");
+            });
+
+        e.target.reset(); // clears form
+    };
+
+
     return (
         <div className="theme1 py-5">
             <Container>
@@ -16,20 +40,20 @@ function Contact1() {
 
                     {/* LEFT - FORM */}
                     <Col md={6}>
-                        <Form className="bg-dark text-white p-4 rounded shadow">
+                        <Form className="bg-dark text-white p-4 rounded shadow" onSubmit={sendEmail}>
                             <Form.Group className="mb-3">
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your name" />
+                                <Form.Control type="text" name="name" placeholder="Enter your name" required />
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Enter your email" />
+                                <Form.Control type="email" name="email" placeholder="Enter your email" required />
                             </Form.Group>
 
                             <Form.Group className="mb-3">
                                 <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={4} placeholder="Write your message..." />
+                                <Form.Control as="textarea" name="message" rows={4} placeholder="Write your message..." required />
                             </Form.Group>
 
                             <Button
@@ -59,7 +83,7 @@ function Contact1() {
                                 className="text-success"
                             >
                                 linkedin.com/in/nevil-patel-3818a024b
-                            </a><br />
+                            </a><br /><br />
 
                             <h5>GitHub</h5>
                             <a

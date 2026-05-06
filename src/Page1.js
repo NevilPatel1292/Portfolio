@@ -39,7 +39,7 @@ function Page1() {
                             <Button
                                 as="a"
                                 href="/NevilResume.pdf"
-                                download="Nevil_Patel_Resume.pdf"
+                                download="NevilPatel_Resume.pdf"
                                 variant="outline-light"
                                 className="px-4 py-2"
                             >
