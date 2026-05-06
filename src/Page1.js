@@ -36,15 +36,6 @@ function Page1() {
                                 View My Work
                             </Button>
 
-                            <Button
-                                as="a"
-                                href="/NevilResume.pdf"
-                                download="NevilPatel_Resume.pdf"
-                                variant="outline-light"
-                                className="px-4 py-2"
-                            >
-                                Download Resume
-                            </Button>
                         </div>
                     </Col>
 
